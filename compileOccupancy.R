@@ -1,8 +1,8 @@
 ### Last edited 24/05/2024
 ### Setting up environment
 ### If a package is installed, it will be loaded. If any are not, the missing package(s) will be installed from CRAN and then loaded.
-### (copied from https://vbaliga.github.io/verify-that-r-packages-are-installed-and-loaded/)
-### First specify the packages of interest
+### Copied from https://vbaliga.github.io/verify-that-r-packages-are-installed-and-loaded/
+### First specify the packages of interest:
 packages = c("dplyr", "tidyverse")
 #
 ### Now load or install & load all
