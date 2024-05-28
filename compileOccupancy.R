@@ -1,8 +1,9 @@
-### Last edited 24/05/2024
-### Setting up environment
-### If a package is installed, it will be loaded. If any are not, the missing package(s) will be installed from CRAN and then loaded.
-### Copied from https://vbaliga.github.io/verify-that-r-packages-are-installed-and-loaded/
-### First specify the packages of interest:
+### Last edited 28/05/2024
+# Setting up environment
+### If a package is installed, it will be loaded. If any are not, the missing 
+### package(s) will be installed from CRAN and then loaded.
+### (copied from https://vbaliga.github.io/verify-that-r-packages-are-installed-and-loaded/)
+### First specify the packages of interest
 packages = c("dplyr", "tidyverse")
 #
 ### Now load or install & load all
@@ -24,7 +25,7 @@ compileOccupancy <- function(dutyTimeFile, startPoint = 0, stopPoint = NULL, run
   ## stopPoint  = n-th minute to stop, default NULL to process till the end
   ## workDir    = pathway to working directory where run folders are located (parent directory)
   ## runStatus  = run name or ID
-  ## saveFile   = name of output file, file extension included (.csv)
+  ## saveFile   = name of output file, file extension included (.csv), output to workDir
   #
   setwd(workDir)
   tab_3states <- read.csv(dutyTimeFile, header = TRUE) %>%
@@ -97,7 +98,7 @@ if(is.null(stopPoint))
 setwd(workDir)
 compile <- tibble(runStatus, stopPoint, avgOccupancyAdapt, avgOccupancyStrand, avgOccupancyPore)
 names(compile) <- c("runID", "end_minute", "adapter%", "strand%", "pore%")
-write.table(compile, file = saveFile, append = TRUE, row.names = FALSE,
+write.table(compile, file = paste0(saveFile,".csv"), append = TRUE, row.names = FALSE,
                        col.names = !file.exists(saveFile), sep = "\t", quote = FALSE)
 }
 #
