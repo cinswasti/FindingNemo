@@ -5,8 +5,8 @@ Required arguments can be called by `args(functionName)` command.
 Annotations of the arguments are given inside each function itself, below are some examples.  
 ## compileOccupancy
 ```r
-compileOccupancy(dutyTimeFile = "path/to/duty_time_file/or/pore_activity_file",
-                 workDir = "path/to/directory/where/sequencing/output/folder/is",
+compileOccupancy(dutyTimeFile = "path/to/duty_time_file/or/pore_activity_file", # different chemistry version calls the file differently
+                 workDir = "path/to/working/directory", # better to use the location of the sequencing output folder
                  saveFile = "test_occupancy",
                  startPoint = 11, stopPoint = NULL, runStatus = "run01")
 ```
