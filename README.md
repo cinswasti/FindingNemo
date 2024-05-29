@@ -43,3 +43,4 @@ yieldStack(seqSummary = "path/to/sequencing_summary_file",
 ```
 Output `run01_timed_stackplot.png` is saved in the same folder with the `sequencing_summary_file.txt`.  
 
+Function `compileOccupancy` and `metricsTable` can each compile an output table consisting of multiple run data. Just change the argument parameters.
