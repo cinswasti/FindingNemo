@@ -17,7 +17,7 @@ package.check <- lapply(
   }
 )
 #
-metricsTable <- function(seqSummary, workDir, runStatus, startPoint = 11, stopPoint, saveDir, saveFile)
+metricsTable <- function(seqSummary, workDir, runStatus, startPoint = 11, stopPoint = NULL, saveDir, saveFile)
   {
   ## seqSummary = path to sequencing_summary file
   ## workDir    = path to working directory; preferably the parent folder where all the runs are
